@@ -13,18 +13,24 @@
 
     <label for="roomId">Room ID</label>
     <input id="roomId" type="text" />
-    <button id="joinBtn" class="btn btn-primary active">Masuk</button>
-    <button id="leaveBtn" class="btn btn-primary active">Keluar</button>
+    
+    <div id="videos">
+      <div id="localVideo-container">
+        <video autoplay playsinline muted></video>
+      </div>
+
+      <div id="centeredVideo-container" class="grid-container">
+        <!-- Tempatkan video dari peserta lain di sini -->
+      </div>
+    </div>
+
+    <!-- Tempatkan tombol di bawah video -->
+    <div class="buttons">
+      <button id="joinBtn" class="btn btn-primary active">Masuk</button>
+      <button id="leaveBtn" class="btn btn-primary active">Keluar</button>
+    </div>
 
     <p id="notification"></p>
-
-    <div id="localVideo-container">
-      <video autoplay playsinline muted></video>
-    </div>
-
-    <div id="videos">
-      <div id="videoGrid" class="grid-container"></div>
-    </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
